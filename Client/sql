@@ -1,0 +1,98 @@
+ create table ebayuserdetails(userid int NOT NULL AUTO_INCREMENT,
+ firstname varchar(50) NOT NULL,
+ lastname varchar(50) NOT NULL ,
+ email varchar(50) NOT NULL ,
+ password varchar(50) NOT NULL,
+ address varchar(50),
+ birthdate varchar(50),
+ phonenumber varchar(50),
+ logintime varchar(50),
+ logouttime varchar(50), 
+ ebayhandle varchar(50),
+ PRIMARY KEY(userid))   
+ 	
+ create table advertisements(itemno int NOT NULL AUTO_INCREMENT,
+ itemname varchar(50) NOT NULL,
+ itemdescription varchar(50) NOT NULL ,
+ sellerinformation varchar(50) NOT NULL ,
+ itemprice double NOT NULL,
+ quantity integer,
+ bidding varchar(10),
+ dateposted TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
+ userid int,
+ PRIMARY KEY(itemno),
+ FOREIGN KEY(userid) REFERENCES ebayuserdetails(userid))   
+ 
+ create table cart(cartno int NOT NULL AUTO_INCREMENT,
+ userid int,
+ itemno int,
+ quantityselected int,
+ PRIMARY KEY(cartno),
+ FOREIGN KEY(userid) REFERENCES ebayuserdetails(userid),
+ FOREIGN KEY(itemno) REFERENCES advertisements(itemno))   
+ 
+ select * from advertisements INNER JOIN cart ON advertisements.itemno = cart.itemno INNER JOIN ebayuserdetails ON cart.userid = ebayuserdetails.userid // may remove oe inner join
+ select * from advertisements INNER JOIN cart ON advertisements.itemno = cart.itemno INNER JOIN ebayuserdetails ON cart.userid = ebayuserdetails.userid where advertisements.quantity >= cart.quantityselected
+ 
+insert into userhistory(itemno,itemname,itemdescription,sellerinformation,transactiontype,quantity,itemprice,email,userid,dateposted) select advertisements.itemno,itemname,itemdescription,sellerinformation,'bought',quantity as quantityselected,itemprice,ebayuserdetails.email,ebayuserdetails.userid,dateposted from advertisements  INNER JOIN cart ON advertisements.itemno = cart.itemno INNER JOIN ebayuserdetails ON cart.userid = ebayuserdetails.userid where advertisements.quantity >= cart.quantityselected
+
+create table userhistory(transactionid int NOT NULL AUTO_INCREMENT,
+itemno int NOT NULL,
+itemname varchar(50) NOT NULL,
+itemdescription varchar(50) NOT NULL ,
+sellerinformation varchar(50) NOT NULL ,
+transactiontype varchar(50),
+quantity int,
+itemprice double,
+email varchar(50),
+userid int,
+dateposted TIMESTAMP,
+PRIMARY KEY(transactionid),
+FOREIGN KEY(userid) REFERENCES ebayuserdetails(userid)) 
+
+create table bid(
+itemno int,
+userid int, 
+bidplaced double,
+quantityselected int, 
+PRIMARY KEY(userid),
+foreign key(itemno) references advertisements(itemno),
+datestamp timestamp DEFAULT current_timestamp)
+
+update advertisements  inner join cart  on cart.itemno = advertisements.itemno set advertisements.quantity = (advertisements.quantity - cart.quantityselected) where cart.quantityselected <= advertisements.quantity
+
+delete from cart where cartno in (select cartno from advertisements inner join (select * from cart) as cart on cart.itemno= advertisements.itemno where cart.quantityselected > advertisements.quantity)
+
+SELECT * FROM advertisements WHERE dateposted >= NOW() - INTERVAL 4 DAY
+
+npm install simple-node-logger --save
+
+select * from advertisements,(select count(*) as isbidplaced from bid,advertisements where advertisements.itemno = bid.itemno and bid.userid = 10) as isbidplaced where advertisements.itemno not in (select itemno from cart where cart.userid = 10) and userid != 10
+
+airbnb
+------
+
+create table properties(propertyid int NOT NULL AUTO_INCREMENT,
+ hostid int NOT NULL,
+ category varchar(50) NOT NULL ,
+ email varchar(50) NOT NULL ,
+ quantity varchar(50) NOT NULL,
+ address varchar(50),
+ city varchar(50),
+ state varchar(50),
+ country varchar(50),
+ zipcode varchar(50),
+ title varchar(50), 
+ description varchar(50),
+ availability_from date,
+ availability_to date,
+ bid varchar(10), 
+ price double,
+ published varchar(10),
+ PRIMARY KEY(propertyid));
+ 
+ALTER TABLE users add column membersince timestamp default current_timestamp
+ALTER TABLE users add column hoststatus varchar(10) default 'NA' 
+ 
+  
+     

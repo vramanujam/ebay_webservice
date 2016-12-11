@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ebay_webservice" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ebay_webservice" xmlns:intf="http://ebay_webservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ebay_webservice" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getUserInfo">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchad">
+    <complexType>
+     <sequence>
+      <element name="searchphrase" type="xsd:string"/>
+      <element name="userid" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchadResponse">
+    <complexType>
+     <sequence>
+      <element name="searchadReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="testWebService">
+    <complexType/>
+   </element>
+   <element name="testWebServiceResponse">
+    <complexType>
+     <sequence>
+      <element name="testWebServiceReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="postad">
+    <complexType>
+     <sequence>
+      <element name="itemname" type="xsd:string"/>
+      <element name="itemdescription" type="xsd:string"/>
+      <element name="sellerinformation" type="xsd:string"/>
+      <element name="itemprice" type="xsd:double"/>
+      <element name="quantity" type="xsd:int"/>
+      <element name="bidding" type="xsd:string"/>
+      <element name="userid" type="xsd:int"/>
+      <element name="email" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="postadResponse">
+    <complexType>
+     <sequence>
+      <element name="postadReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="signup">
+    <complexType>
+     <sequence>
+      <element name="firstname" type="xsd:string"/>
+      <element name="lastname" type="xsd:string"/>
+      <element name="email" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="signupResponse">
+    <complexType>
+     <sequence>
+      <element name="signupReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="signin">
+    <complexType>
+     <sequence>
+      <element name="email" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="signinResponse">
+    <complexType>
+     <sequence>
+      <element name="signinReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getcartvolume">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getcartvolumeResponse">
+    <complexType>
+     <sequence>
+      <element name="getcartvolumeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getad">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getadResponse">
+    <complexType>
+     <sequence>
+      <element name="getadReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addBid">
+    <complexType>
+     <sequence>
+      <element name="itemno" type="xsd:int"/>
+      <element name="userid" type="xsd:int"/>
+      <element name="bidplaced" type="xsd:double"/>
+      <element name="quantity" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addBidResponse">
+    <complexType>
+     <sequence>
+      <element name="addBidReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addBidRequest">
+
+      <wsdl:part element="impl:addBid" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="signinRequest">
+
+      <wsdl:part element="impl:signin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getcartvolumeResponse">
+
+      <wsdl:part element="impl:getcartvolumeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="signupResponse">
+
+      <wsdl:part element="impl:signupResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserInfoResponse">
+
+      <wsdl:part element="impl:getUserInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="signupRequest">
+
+      <wsdl:part element="impl:signup" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserInfoRequest">
+
+      <wsdl:part element="impl:getUserInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getcartvolumeRequest">
+
+      <wsdl:part element="impl:getcartvolume" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="postadRequest">
+
+      <wsdl:part element="impl:postad" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchadRequest">
+
+      <wsdl:part element="impl:searchad" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="postadResponse">
+
+      <wsdl:part element="impl:postadResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addBidResponse">
+
+      <wsdl:part element="impl:addBidResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="testWebServiceResponse">
+
+      <wsdl:part element="impl:testWebServiceResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchadResponse">
+
+      <wsdl:part element="impl:searchadResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="testWebServiceRequest">
+
+      <wsdl:part element="impl:testWebService" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="signinResponse">
+
+      <wsdl:part element="impl:signinResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getadResponse">
+
+      <wsdl:part element="impl:getadResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getadRequest">
+
+      <wsdl:part element="impl:getad" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ebay_services">
+
+      <wsdl:operation name="getUserInfo">
+
+         <wsdl:input message="impl:getUserInfoRequest" name="getUserInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserInfoResponse" name="getUserInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchad">
+
+         <wsdl:input message="impl:searchadRequest" name="searchadRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:searchadResponse" name="searchadResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="testWebService">
+
+         <wsdl:input message="impl:testWebServiceRequest" name="testWebServiceRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:testWebServiceResponse" name="testWebServiceResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="postad">
+
+         <wsdl:input message="impl:postadRequest" name="postadRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:postadResponse" name="postadResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="signup">
+
+         <wsdl:input message="impl:signupRequest" name="signupRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:signupResponse" name="signupResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="signin">
+
+         <wsdl:input message="impl:signinRequest" name="signinRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:signinResponse" name="signinResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getcartvolume">
+
+         <wsdl:input message="impl:getcartvolumeRequest" name="getcartvolumeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getcartvolumeResponse" name="getcartvolumeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getad">
+
+         <wsdl:input message="impl:getadRequest" name="getadRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getadResponse" name="getadResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addBid">
+
+         <wsdl:input message="impl:addBidRequest" name="addBidRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addBidResponse" name="addBidResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ebay_servicesSoapBinding" type="impl:ebay_services">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getUserInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="testWebService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="testWebServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="testWebServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="postad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="postadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="postadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="signup">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="signupRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="signupResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="signin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="signinRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="signinResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getcartvolume">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getcartvolumeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getcartvolumeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addBid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addBidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addBidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ebay_servicesService">
+
+      <wsdl:port binding="impl:ebay_servicesSoapBinding" name="ebay_services">
+
+         <wsdlsoap:address location="http://localhost:8080/ebay_webservice/services/ebay_services"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

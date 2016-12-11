@@ -1,0 +1,66 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ebay_servicesService WSDL service -->
+
+  <service name="ebay_services" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ebay_webservice"/>
+      <parameter name="wsdlServiceElement" value="ebay_servicesService"/>
+      <parameter name="schemaQualified" value="http://ebay_webservice"/>
+      <parameter name="wsdlServicePort" value="ebay_services"/>
+      <parameter name="className" value="ebay_webservice.Ebay_servicesSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ebay_services"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getUserInfo" qname="operNS:getUserInfo" xmlns:operNS="http://ebay_webservice" returnQName="retNS:getUserInfoReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="searchad" qname="operNS:searchad" xmlns:operNS="http://ebay_webservice" returnQName="retNS:searchadReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:searchphrase" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:userid" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="testWebService" qname="operNS:testWebService" xmlns:operNS="http://ebay_webservice" returnQName="retNS:testWebServiceReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="postad" qname="operNS:postad" xmlns:operNS="http://ebay_webservice" returnQName="retNS:postadReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:itemname" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:itemdescription" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:sellerinformation" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:itemprice" xmlns:pns="http://ebay_webservice" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:quantity" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:bidding" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:userid" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:email" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="signup" qname="operNS:signup" xmlns:operNS="http://ebay_webservice" returnQName="retNS:signupReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:firstname" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:lastname" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:email" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:password" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="signin" qname="operNS:signin" xmlns:operNS="http://ebay_webservice" returnQName="retNS:signinReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:email" xmlns:pns="http://ebay_webservice" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getcartvolume" qname="operNS:getcartvolume" xmlns:operNS="http://ebay_webservice" returnQName="retNS:getcartvolumeReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getad" qname="operNS:getad" xmlns:operNS="http://ebay_webservice" returnQName="retNS:getadReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="addBid" qname="operNS:addBid" xmlns:operNS="http://ebay_webservice" returnQName="retNS:addBidReturn" xmlns:retNS="http://ebay_webservice" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:itemno" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:userid" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:bidplaced" xmlns:pns="http://ebay_webservice" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:quantity" xmlns:pns="http://ebay_webservice" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="testWebService getad postad signin getcartvolume addBid getUserInfo searchad signup"/>
+
+  </service>
+</deployment>

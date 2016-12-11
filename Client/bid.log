@@ -1,0 +1,38 @@
+04:45:21.791 INFO  bid posted by 12 performed at 2016-10-15T11:45:21.791Z bid item iPhone  
+04:46:34.026 INFO  bid placed by 10 performed at 2016-10-15T11:46:34.026Z for item 48 amount 334 
+04:46:50.842 INFO  bid placed by 11 performed at 2016-10-15T11:46:50.842Z for item 48 amount 434 
+04:47:08.480 INFO  bid placed by 13 performed at 2016-10-15T11:47:08.480Z for item 49 amount 384 
+04:51:50.144 INFO  bid won by 11 performed at 2016-10-15T11:51:50.143Z for item 48 amount placed 434 quantity selected 20 
+04:51:50.170 INFO  bid won by 13 performed at 2016-10-15T11:51:50.170Z for item 49 amount placed 384 quantity selected 16 
+05:12:51.008 INFO  bid posted by 13 performed at 2016-10-15T12:12:51.008Z bid item PS2  
+05:13:16.185 INFO  bid placed by 11 performed at 2016-10-15T12:13:16.185Z for item 50 amount 46 
+05:13:43.896 INFO  bid placed by 10 performed at 2016-10-15T12:13:43.896Z for item 50 amount 46 
+05:14:11.553 INFO  bid placed by 12 performed at 2016-10-15T12:14:11.553Z for item 50 amount 55 
+05:17:50.687 INFO  bid won by 12 performed at 2016-10-15T12:17:50.686Z for item 50 amount placed 55 quantity selected 6 
+05:17:50.695 INFO  bid won by 10 performed at 2016-10-15T12:17:50.695Z for item 50 amount placed 46 quantity selected 16 
+15:31:23.241 INFO  bid posted by 12 performed at 2016-10-15T22:31:23.241Z bid item Keyboard  
+16:47:23.939 INFO  bid posted by 12 performed at 2016-10-15T23:47:23.939Z bid item Mouse  
+16:47:45.564 INFO  bid placed by 10 performed at 2016-10-15T23:47:45.563Z for item 53 amount 6 
+16:49:42.489 INFO  bid posted by 8 performed at 2016-10-15T23:49:42.489Z bid item keyboard  
+16:49:57.826 INFO  bid placed by 10 performed at 2016-10-15T23:49:57.826Z for item 54 amount 8 
+16:51:22.379 INFO  bid placed by 10 performed at 2016-10-15T23:51:22.379Z for item 53 amount 6 
+16:52:50.393 INFO  bid won by 10 performed at 2016-10-15T23:52:50.393Z for item 53 amount placed 6 quantity selected 1 
+18:12:56.233 INFO  bid posted by 10 performed at 2016-10-16T01:12:56.233Z bid item Choclate  
+18:13:20.926 INFO  bid placed by 8 performed at 2016-10-16T01:13:20.926Z for item 55 amount 12 
+18:13:42.441 INFO  bid placed by 13 performed at 2016-10-16T01:13:42.441Z for item 55 amount 11 
+18:18:50.225 INFO  bid won by 8 performed at 2016-10-16T01:18:50.225Z for item 55 amount placed 12 quantity selected 4 
+18:18:50.232 INFO  bid won by 13 performed at 2016-10-16T01:18:50.232Z for item 55 amount placed 11 quantity selected 1 
+18:30:36.583 INFO  bid posted by 11 performed at 2016-10-16T01:30:36.583Z bid item Sword  
+18:30:51.221 INFO  bid placed by 8 performed at 2016-10-16T01:30:51.221Z for item 56 amount 6 
+18:35:50.414 INFO  bid won by 8 performed at 2016-10-16T01:35:50.414Z for item 56 amount placed 6 quantity selected 1 
+18:37:47.570 INFO  bid posted by 8 performed at 2016-10-16T01:37:47.570Z bid item Stunner  
+18:38:03.798 INFO  bid placed by 12 performed at 2016-10-16T01:38:03.798Z for item 57 amount 6 
+18:38:21.111 INFO  bid placed by 12 performed at 2016-10-16T01:38:21.111Z for item 57 amount 14 
+18:38:49.303 INFO  bid placed by 12 performed at 2016-10-16T01:38:49.303Z for item 57 amount 11 
+18:42:50.463 INFO  bid won by 12 performed at 2016-10-16T01:42:50.463Z for item 57 amount placed 11 quantity selected 2 
+22:31:47.540 INFO  bid posted by 12 performed at 2016-10-17T05:31:47.540Z bid item Fan  
+22:32:36.972 INFO  bid placed by 8 performed at 2016-10-17T05:32:36.972Z for item 58 amount 14 
+22:36:50.550 INFO  bid won by 8 performed at 2016-10-17T05:36:50.550Z for item 58 amount placed 14 quantity selected 8 
+08:55:33.017 INFO  bid posted by 19 performed at 2016-12-10T16:55:33.017Z bid item Naruto Stickers  
+01:33:36.796 INFO  bid posted by 12 performed at 2016-12-11T09:33:36.796Z bid item Shriken  
+01:34:06.362 INFO  bid placed by 19 performed at 2016-12-11T09:34:06.362Z for item 56 amount 16 
