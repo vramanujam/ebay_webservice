@@ -1,11 +1,4 @@
-/**
- * New node file
- */
-/**
- * 
- */
-
- var app = angular.module('userprofile', [/*'ui.router'*/]);
+var app = angular.module('userprofile', [/*'ui.router'*/]);
 
 	app.controller('userprofileCtrl', function($scope, $http) {
 	    //alert("hi");
@@ -100,7 +93,7 @@
 				  }).then(function mySucces(response) {
 						
 					 //alert("hello"); 
-				     $scope.userinfo = response.data;
+				     //$scope.userinfo = response.data;
 				    }, function myError(response) {
 				     // $scope.myWelcome = response.statusText;
 				  });

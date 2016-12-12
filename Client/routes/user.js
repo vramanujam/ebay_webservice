@@ -173,136 +173,119 @@ exports.searchad = function(req, res){
 };
 	
 exports.updateSingleUserVal = function(req,res){
-		  log.info('updateSingleUserVal done by ', req.session.id, ' performed at ', new Date().toJSON(),' cart item no ',req.body.cartNo);
-		  console.log(req.body);
-		  connectionpool.getConnection(function(err,connection){
-		  if(err){
-			connectionpool.releaseSQLConnection(connection);  
-		    console.log('Error connecting to Db');
-		    return;
-		  }
-		  connection.query(
- 			  'UPDATE ebayuserdetails SET '+ req.body.data + ' = ? Where userid = ?',
- 			  [req.body.value,req.session.id],
- 			  function (err, result) {
- 			    if (err)
- 			    {
- 			    	console.log(err);
- 			    	connectionpool.releaseSQLConnection(connection);
- 			    	throw err;
- 			    }
- 			    //--
-	   			 connectionpool.releaseSQLConnection(connection);
- 			    //--
- 		 });		  
+	log.info('updateSingleUserVal done by ', req.session.id, ' performed at ', new Date().toJSON(),' cart item no ',req.body.cartNo);
+	console.log(req.body);
+	var arg = {};
+	arg.data = req.body.data;
+	arg.value = req.body.value;
+	arg.userid = req.session.id;
+	soap.createClient(url,option, function(err, client) {
+		client.updateSingleUserVal(arg, function(err, result) {
+			if(err)
+			{
+				console.log("soap error at signup " + err);
+				return;
+			}
+			if(result.updateSingleUserValReturn)
+			{
+				console.log('user value updated successfully');
+				res.send('{status:success}');
+			}
+		});
 	});
-	
-	// res.send("success");
 };
 
 exports.changeCartQuantity = function(req,res){
-		  log.info('Cart Quantity Changed by ', req.session.id, ' performed at ', new Date().toJSON(),' cart item no ',req.body.cartNo);
-		  connectionpool.getConnection(function(err,connection){
-		  if(err){
-			connectionpool.releaseSQLConnection(connection);  
-		    console.log('Error connecting to Db');
-		    return;
-		  }
-		  connection.query(
-   			  'UPDATE cart SET quantityselected = ? Where cartno = ?',
-   			  [req.body.changedQuantity,req.body.cartNo],
-   			  function (err, result) {
-   			    if (err)
-   			    {
-   			    	connectionpool.releaseSQLConnection(connection);
-   			    	throw err;
-   			    }
-   			    //--
-	   			 connection.query('select * from advertisements INNER JOIN cart ON advertisements.itemno = cart.itemno INNER JOIN ebayuserdetails ON cart.userid = ebayuserdetails.userid where advertisements.quantity >= cart.quantityselected and cart.userid = ?',[req.session.id], function(err, rows, fields) {
-	   			  if (!err)
-	   			  {
-	   			     console.log('The solution is: '+ rows.length + ' ' + JSON.stringify(rows[0]));
-	   			     connectionpool.releaseSQLConnection(connection);
-	   			     var objToSend = new Object();
-	   			     //objToSend.cartItems = rows;
-	   			     var i = 0, total = 0;
-	   			     for(i = 0; i < rows.length; i++)
-	   			     {
-	   			    	 total = total + (rows[i].itemprice * rows[i].quantityselected);
-	   			     }
-	   			     objToSend.carttotal = total;
-	   			     
-	   			     res.send(objToSend);		    	 		    
-	   			  }
-	   			  else
-	   			  {
-	   				connectionpool.releaseSQLConnection(connection);  
-	   			  
-	   			    console.log('Error while performing Query.');
-	   			  }
-	   		  });
-   			    //--
-   		 });
-		  
+	log.info('Cart Quantity Changed by ', req.session.id, ' performed at ', new Date().toJSON(),' cart item no ',req.body.cartNo);
+	var arg = {};
+	arg.quantityselected = req.body.changedQuantity;
+	arg.cartno = req.body.cartNo;
+	arg.userid = req.session.id;
+	soap.createClient(url,option, function(err, client) {
+		client.changeCartQuantity(arg, function(err, result) {
+			if(err)
+			{
+				console.log("soap error at signup " + err);
+				return;
+			}
+			var ret = JSON.parse(result.changeCartQuantityReturn);
+			var rows = ret.value;
+			var objToSend = new Object();
+			//objToSend.cartItems = rows;
+			var i = 0, total = 0;
+			for(i = 0; i < rows.length; i++)
+			{
+				total = total + (rows[i].itemprice * rows[i].quantityselected);
+			}
+			objToSend.carttotal = total;
+			res.send(objToSend);
+		});
 	});
 };
 exports.getUserHistory = function(req, res){
 	log.info('User history view ', req.session.id, ' performed at ', new Date().toJSON());
-	connectionpool.getConnection(function(err,connection){
-	  if(err)
-	  {
-		connectionpool.releaseSQLConnection(connection);  
-	    console.log('Error connecting to Db');
-	    return;
-	  }
-	  connection.query('SELECT * from userhistory where userid = ?',[req.session.id], function(err, rows, fields) {
-		  if (!err)
-		  {
-		     console.log('The solution is: '+ rows.length + ' ' + JSON.stringify(rows[0]));
-		     connectionpool.releaseSQLConnection(connection);
-		     res.send(rows);		    	 		    
-		  }
-		  else
-		  {
-			  connectionpool.releaseSQLConnection(connection);
-			  console.log('Error while performing Query.');				  
-		  }
-	   }); 
+	soap.createClient(url,option, function(err, client) {
+		client.getUserHistory({userid:req.session.id}, function(err, result) {
+			if(err)
+			{
+				console.log("soap error at signup " + err);
+				return;
+			}
+			var ret = JSON.parse(result.getUserHistoryReturn);
+			console.log(ret.value);
+			res.send(ret.value);
+		});
 	});
+
 };
 exports.addToCart = function(req, res){
 	log.info('item added to cart ', req.session.id, ' performed at ', new Date().toJSON(),' item no ',req.body.itemid);
 	console.log(req.body);
-	connectionpool.getConnection(function(err,connection){
-		  if(err){
-			connectionpool.releaseSQLConnection(connection);  
-		    console.log('Error connecting to Db');
-		    return;
-		  }
-		  var post = new Object();
-		  post.itemno = req.body.itemid;
-		  post.quantityselected = parseInt(req.body.quantitySelected)+1;
-		  post.userid = req.session.id;
-		  //post.dateposted = NOW();
-		  //var post  = {itemname: req.body.itemname, itemdescription:req.body.itemdescription,sellerinformation:req.body.itemdescription,itemprice:req.body.itemprice,quantity:req.body.quantity,bidding:req.body.bidding,userid:req.session.id};
-		  console.log(JSON.stringify(post));
-		  var query =  connection.query('INSERT INTO cart SET ?', post,function (err, result) {
-   			    if (err) 
-   			    {
-   			    	connectionpool.releaseSQLConnection(connection);
-   			    	throw err;
-   			    }
-   			    connectionpool.releaseSQLConnection(connection);
-   		  });
-		  
+	var post = {};
+	post.itemno = req.body.itemid;
+	post.quantityselected = parseInt(req.body.quantitySelected)+1;
+	post.userid = req.session.id;
+	soap.createClient(url,option, function(err, client) {
+		client.addToCart(post, function(err, result) {
+			if(err)
+			{
+				console.log("soap error at signup " + err);
+				return;
+			}
+			if(result.addToCartReturn)
+			{
+				console.log("add to cart succeeded");
+				res.render("cart",{});
+			}
+		});
 	});
-	
-	res.render("cart",{});
-	//res.render("dashboard",{});
 };
+
 exports.getCart = function(req, res){		
 	log.info('Cart viewed ', req.session.id, ' performed at ', new Date().toJSON());
-	connectionpool.getConnection(function(err,connection){
+	soap.createClient(url,option, function(err, client) {
+		client.getCart({userid:req.session.id}, function(err, result) {
+			if(err)
+			{
+				console.log("soap error at signup " + err);
+				return;
+			}
+			var ret = JSON.parse(result.getCartReturn);
+
+			var objToSend = new Object();
+			objToSend.cartItems = ret.cartitems;
+			var i = 0, total = 0;
+			for(i = 0; i < objToSend.cartItems.length; i++)
+			{
+				total = total + (objToSend.cartItems[i].itemprice * objToSend.cartItems[i].quantityselected);
+			}
+			objToSend.carttotal = total;
+			objToSend.bidItems = ret.biditems;
+			console.log(ret);
+			res.send(objToSend);
+		});
+	});
+	/*connectionpool.getConnection(function(err,connection){
 		  if(err){
 			connectionpool.releaseSQLConnection(connection);  
 		    console.log('Error connecting to Db');
@@ -339,45 +322,28 @@ exports.getCart = function(req, res){
 		  }
 		    
 		});		 
-	});
+	});*/
 };
 exports.removeFromCart = function(req,res){
 	log.info('item removed from cart ', req.session.id, ' performed at ', new Date().toJSON(),' item no ',req.body.itemno);
-	connectionpool.getConnection(function(err,connection){
-	  if(err)
-	  {
-		connectionpool.releaseSQLConnection(connection);
-	    console.log('Error connecting to Db');
-	    return;
-	  }
-	  console.log('Connection established new' + err);
-	  connection.query('delete from cart where itemno = ?',req.body.itemno, function(err, result) {
-		  if (err){
-			  connectionpool.releaseSQLConnection(connection);
-			  throw err;
-		  }
-		  //--
-		  connection.query('select * from advertisements INNER JOIN cart ON advertisements.itemno = cart.itemno INNER JOIN ebayuserdetails ON cart.userid = ebayuserdetails.userid where advertisements.quantity >= cart.quantityselected and cart.userid = ?',req.session.id, function(err, rows, fields) {
-			  if (!err)
-			  {
-			     console.log('The solution is: '+ rows.length + ' ' + JSON.stringify(rows[0]));
-			     connectionpool.releaseSQLConnection(connection);
-			     var objToSend = new Object();
-			     objToSend.cartItems = rows;
-			     var i = 0, total = 0;
-			     for(i = 0; i < rows.length; i++)
-			     {
-			    	 total = total + (rows[i].itemprice * rows[i].quantityselected);
-			     }
-			     objToSend.carttotal = total;
-			     res.send(objToSend);		    	 		    
-			  }
-			  else{
-			    console.log('Error while performing Query.');
-			    connectionpool.releaseSQLConnection(connection);
-			  }
-		  });
-		  //--
-		});	 
+	soap.createClient(url,option, function(err, client) {
+		client.removeFromCart({itemno:req.body.itemno,userid:req.session.id}, function(err, result) {
+			if(err)
+			{
+				console.log("soap error at signup " + err);
+				return;
+			}
+			var ret = JSON.parse(result.removeFromCartReturn);
+			var objToSend = new Object();
+			objToSend.cartItems = ret.cartitems;
+			var i = 0, total = 0;
+			for(i = 0; i < objToSend.cartItems.length; i++)
+			{
+				total = total + (objToSend.cartItems[i].itemprice * objToSend.cartItems[i].quantityselected);
+			}
+			objToSend.carttotal = total;
+			console.log(ret);
+			res.send(objToSend);
+		});
 	});
 };

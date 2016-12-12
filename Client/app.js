@@ -11,6 +11,14 @@ var express = require('express')
   , scheduler = require('./routes/scheduler')
   , url  = require('url');
 
+var soap = require('soap');
+var baseURL = "http://localhost:8080/ebay_webservice/services";
+var option = {
+	ignoredNamespaces : true
+};
+var soapurl = baseURL+"/ebay_services?wsdl";
+
+
 var CronJob = require('cron').CronJob;
 var connectionpool = require('./routes/connectionpool');
 var app = express();
@@ -87,9 +95,27 @@ app.use(function(req, res, next) {
 	 	console.log(url_parts);
 	 
 	 	console.log(url_parts.pathname);
-	 	//var connection = connectionpool.getSQLConnection();
-	 	//var err = (connection == undefined)?true:false;
-	 	connectionpool.getConnection(function(err,connection)
+	 	soap.createClient(soapurl,option, function(err, client) {
+			client.getebayhandle({handle:url_parts.pathname.substring(1,url_parts.pathname.length)}, function(err, result) {
+				if(err)
+				{
+					res.status(200).send('Invalid path');
+					return;
+				}
+				var ret = JSON.parse(result.getebayhandleReturn);
+				console.log(ret.value);
+				var rows = ret.value;
+				if(rows.length == 0){
+					res.status(200).send('Invalid path');
+					//res.render('error',{});
+
+				}
+				else
+					res.render('ebayhandlepage',{email:rows[0].email,firstname:rows[0].firstname, lastname:rows[0].lastname, logintime:rows[0].logintime, phonenumber:rows[0].phonenumber,address:rows[0].address,birthdate:rows[0].birthdate});
+
+			});
+		});
+	 	/*connectionpool.getConnection(function(err,connection)
 	 	{
  		  if(err)
  		  {
@@ -122,7 +148,7 @@ app.use(function(req, res, next) {
  				  console.log('Error while performing Query.');				  
  			  }
  		   }); 
- 		});
+ 		});*/
 	 	
 	});
 

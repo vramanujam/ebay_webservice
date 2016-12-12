@@ -1,5 +1,12 @@
 var connectionpool = require('./connectionpool');
 var log = require('./logger');
+var soap = require('soap');
+var baseURL = "http://localhost:8080/ebay_webservice/services";
+var option = {
+	ignoredNamespaces : true
+};
+var url = baseURL+"/ebay_services?wsdl";
+
 function check_card_num(cardnum) {
 
 	if (/[^0-9-\s]+/.test(cardnum)) return false;
@@ -78,64 +85,21 @@ exports.onPayment = function(req, res){
 	}	
 	else
 	{
-		log.info('payment successful ', req.session.id, ' performed at ', new Date().toJSON());
-		// update quantity in the advertisement table
-		// update user history
-		connectionpool.getConnection(function(err,connection){
-			if(err){
-				connectionpool.releaseSQLConnection(connection);  
-				console.log('Error connecting to Db');
-				return;
-			}				 
-			var query =  connection.query('insert into userhistory(itemno,itemname,itemdescription,sellerinformation,transactiontype,quantity,itemprice,email,userid,dateposted) select advertisements.itemno,itemname,itemdescription,sellerinformation,\'bought\',cart.quantityselected as quantity,itemprice,ebayuserdetails.email,ebayuserdetails.userid,dateposted from advertisements  INNER JOIN cart ON advertisements.itemno = cart.itemno INNER JOIN ebayuserdetails ON cart.userid = ebayuserdetails.userid where advertisements.quantity >= cart.quantityselected and ebayuserdetails.userid = ? ',req.session.id,function (err, result) {
-				if (err) 
+		soap.createClient(url,option, function(err, client) {
+			client.payment({userid:req.session.id}, function(err, result) {
+				if(err)
 				{
-					connectionpool.releaseSQLConnection(connection);
-					throw err;
-
+					console.log("soap error at signup " + err);
+					return;
 				}
-				//--
-				query =  connection.query('update advertisements inner join cart  on cart.itemno = advertisements.itemno set advertisements.quantity = (advertisements.quantity - cart.quantityselected) where cart.quantityselected <= advertisements.quantity and cart.userid = ?',[req.session.id],function (err, result) {
-					if (err) 
-					{
-						connectionpool.releaseSQLConnection(connection);
-						throw err;
-					}
-					//--
-					query =  connection.query('delete from cart where userid = ?',req.session.id,function (err, result) {
-						if (err)
-						{ 
-							connectionpool.releaseSQLConnection(connection);
-							throw err;
-						}
-						//--
-						query =  connection.query('delete from advertisements where quantity <= 0',function (err, result) {
-							if (err) 
-							{
-								connectionpool.releaseSQLConnection(connection);
-								throw err;
-							}
-							//-- remove cart items if they are less than actual quantity available
-							query =  connection.query('delete from cart where cartno in (select cartno from advertisements inner join (select * from cart) as cart on cart.itemno= advertisements.itemno where cart.quantityselected > advertisements.quantity)',function (err, result){
-								if (err) 
-								{
-									connectionpool.releaseSQLConnection(connection);
-									throw err;
-								}
-								connectionpool.releaseSQLConnection(connection);
-							});
-
-							//--
-						});	
-						//--
-					});
-					//--
-				});   			    		//--
+				if(result.paymentReturn)
+				{
+					log.info('payment successful ', req.session.id, ' performed at ', new Date().toJSON());
+					console.log('payment successful');
+				}
 			});
 		});
-		// delete from cart
 		res.render('dashboard', { err: '' });
-		//res.send("Payment Successful");
 	}		
 };
 exports.checkout = function(req,res)

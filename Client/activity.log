@@ -969,3 +969,318 @@
 02:37:27.575 INFO  searchad 12 performed at 2016-12-11T10:37:27.575Z keyword Naruto 
 02:37:44.468 INFO  getcartvolume 12 performed at 2016-12-11T10:37:44.468Z 
 02:37:44.474 INFO  getad 12 performed at 2016-12-11T10:37:44.474Z 
+03:11:50.214 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T11:11:50.212Z 
+03:11:53.099 INFO  sign in attempt succeeded 12 performed at 2016-12-11T11:11:53.098Z 
+03:11:53.482 INFO  getcartvolume 12 performed at 2016-12-11T11:11:53.481Z 
+03:11:53.487 INFO  getad 12 performed at 2016-12-11T11:11:53.487Z 
+03:11:55.965 INFO  user profile clicked 12 performed at 2016-12-11T11:11:55.965Z 
+03:11:56.451 INFO  get user info 12 performed at 2016-12-11T11:11:56.451Z 
+03:11:56.461 INFO  getcartvolume 12 performed at 2016-12-11T11:11:56.461Z 
+03:12:04.097 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:12:04.097Z cart item no  
+03:12:44.491 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:12:44.491Z cart item no  
+03:13:33.242 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:13:33.242Z cart item no  
+03:13:56.454 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:13:56.454Z cart item no  
+03:13:56.537 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:13:56.537Z cart item no  
+03:13:56.582 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:13:56.582Z cart item no  
+03:14:51.786 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:14:51.786Z cart item no  
+03:14:59.271 INFO  updateSingleUserVal done by 12 performed at 2016-12-11T11:14:59.271Z cart item no  
+03:38:54.872 INFO  getcartvolume 12 performed at 2016-12-11T11:38:54.870Z 
+03:38:54.900 INFO  getad 12 performed at 2016-12-11T11:38:54.900Z 
+03:38:59.444 INFO  item added to cart 12 performed at 2016-12-11T11:38:59.444Z item no 46 
+03:38:59.800 INFO  Cart viewed 12 performed at 2016-12-11T11:38:59.800Z 
+03:39:06.062 INFO  Cart Quantity Changed by 12 performed at 2016-12-11T11:39:06.062Z cart item no 55 
+03:40:05.717 INFO  getcartvolume 12 performed at 2016-12-11T11:40:05.715Z 
+03:40:05.744 INFO  getad 12 performed at 2016-12-11T11:40:05.744Z 
+03:40:07.723 INFO  view cart clicked 12 performed at 2016-12-11T11:40:07.723Z 
+03:40:08.117 INFO  Cart viewed 12 performed at 2016-12-11T11:40:08.117Z 
+03:40:12.905 INFO  Cart Quantity Changed by 12 performed at 2016-12-11T11:40:12.904Z cart item no 55 
+03:40:23.928 INFO  Cart Quantity Changed by 12 performed at 2016-12-11T11:40:23.927Z cart item no 55 
+03:40:29.660 INFO  Cart Quantity Changed by 12 performed at 2016-12-11T11:40:29.659Z cart item no 55 
+03:40:54.908 INFO  getcartvolume 12 performed at 2016-12-11T11:40:54.908Z 
+03:40:54.914 INFO  getad 12 performed at 2016-12-11T11:40:54.914Z 
+04:00:17.716 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T12:00:17.716Z 
+04:00:18.863 INFO  sign in attempt succeeded 12 performed at 2016-12-11T12:00:18.863Z 
+04:00:19.238 INFO  getcartvolume 12 performed at 2016-12-11T12:00:19.237Z 
+04:00:19.243 INFO  getad 12 performed at 2016-12-11T12:00:19.243Z 
+04:00:22.443 INFO  view cart clicked 12 performed at 2016-12-11T12:00:22.443Z 
+04:00:22.717 INFO  Cart viewed 12 performed at 2016-12-11T12:00:22.717Z 
+04:00:30.120 INFO  Cart Quantity Changed by 12 performed at 2016-12-11T12:00:30.120Z cart item no 55 
+04:04:03.591 INFO  post ad clicked 12 performed at 2016-12-11T12:04:03.590Z 
+04:04:04.317 INFO  getcartvolume 12 performed at 2016-12-11T12:04:04.317Z 
+04:04:20.844 INFO  user profile clicked 12 performed at 2016-12-11T12:04:20.844Z 
+04:04:21.331 INFO  get user info 12 performed at 2016-12-11T12:04:21.331Z 
+04:04:21.339 INFO  getcartvolume 12 performed at 2016-12-11T12:04:21.339Z 
+04:04:25.127 INFO  user history clicked 12 performed at 2016-12-11T12:04:25.127Z 
+04:04:25.441 INFO  getcartvolume 12 performed at 2016-12-11T12:04:25.441Z 
+04:04:25.449 INFO  User history view 12 performed at 2016-12-11T12:04:25.449Z 
+04:04:40.464 INFO  user history clicked 12 performed at 2016-12-11T12:04:40.464Z 
+04:04:40.704 INFO  getcartvolume 12 performed at 2016-12-11T12:04:40.704Z 
+04:04:40.709 INFO  User history view 12 performed at 2016-12-11T12:04:40.709Z 
+04:04:43.860 INFO  user profile clicked 12 performed at 2016-12-11T12:04:43.860Z 
+04:04:44.411 INFO  get user info 12 performed at 2016-12-11T12:04:44.411Z 
+04:04:44.418 INFO  getcartvolume 12 performed at 2016-12-11T12:04:44.417Z 
+04:04:46.094 INFO  user history clicked 12 performed at 2016-12-11T12:04:46.094Z 
+04:04:46.438 INFO  getcartvolume 12 performed at 2016-12-11T12:04:46.437Z 
+04:04:46.442 INFO  User history view 12 performed at 2016-12-11T12:04:46.442Z 
+04:05:37.474 INFO  user profile clicked 12 performed at 2016-12-11T12:05:37.474Z 
+04:05:38.170 INFO  get user info 12 performed at 2016-12-11T12:05:38.170Z 
+04:05:38.175 INFO  getcartvolume 12 performed at 2016-12-11T12:05:38.175Z 
+04:05:39.689 INFO  user history clicked 12 performed at 2016-12-11T12:05:39.689Z 
+04:05:39.966 INFO  getcartvolume 12 performed at 2016-12-11T12:05:39.966Z 
+04:05:39.972 INFO  User history view 12 performed at 2016-12-11T12:05:39.972Z 
+04:33:17.696 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T12:33:17.694Z 
+04:33:20.676 INFO  sign in attempt succeeded 12 performed at 2016-12-11T12:33:20.676Z 
+04:33:21.061 INFO  getcartvolume 12 performed at 2016-12-11T12:33:21.061Z 
+04:33:21.068 INFO  getad 12 performed at 2016-12-11T12:33:21.068Z 
+04:33:23.810 INFO  item added to cart 12 performed at 2016-12-11T12:33:23.810Z item no 55 
+04:33:24.314 INFO  Cart viewed 12 performed at 2016-12-11T12:33:24.314Z 
+10:59:39.785 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T18:59:39.784Z 
+10:59:42.850 INFO  sign in attempt succeeded 12 performed at 2016-12-11T18:59:42.850Z 
+10:59:43.248 INFO  getcartvolume 12 performed at 2016-12-11T18:59:43.248Z 
+10:59:43.258 INFO  getad 12 performed at 2016-12-11T18:59:43.258Z 
+10:59:50.346 INFO  view cart clicked 12 performed at 2016-12-11T18:59:50.346Z 
+10:59:50.725 INFO  Cart viewed 12 performed at 2016-12-11T18:59:50.725Z 
+11:01:00.001 INFO  view cart clicked 12 performed at 2016-12-11T19:00:59.999Z 
+11:01:00.484 INFO  Cart viewed 12 performed at 2016-12-11T19:01:00.484Z 
+11:01:23.436 INFO  view cart clicked 12 performed at 2016-12-11T19:01:23.436Z 
+11:01:23.914 INFO  Cart viewed 12 performed at 2016-12-11T19:01:23.914Z 
+11:01:33.180 INFO  logout  performed at 2016-12-11T19:01:33.179Z 
+11:01:37.805 INFO  sign in attempt initiated guru@gmail.com performed at 2016-12-11T19:01:37.805Z 
+11:01:38.996 INFO  sign in attempt succeeded 19 performed at 2016-12-11T19:01:38.996Z 
+11:01:39.269 INFO  getcartvolume 19 performed at 2016-12-11T19:01:39.269Z 
+11:01:39.280 INFO  getad 19 performed at 2016-12-11T19:01:39.280Z 
+11:01:41.082 INFO  view cart clicked 19 performed at 2016-12-11T19:01:41.082Z 
+11:01:41.387 INFO  Cart viewed 19 performed at 2016-12-11T19:01:41.387Z 
+11:02:19.152 INFO  view cart clicked 19 performed at 2016-12-11T19:02:19.150Z 
+11:02:19.753 INFO  Cart viewed 19 performed at 2016-12-11T19:02:19.753Z 
+11:10:14.876 INFO  logout  performed at 2016-12-11T19:10:14.875Z 
+11:10:16.826 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T19:10:16.826Z 
+11:10:19.886 INFO  sign in attempt succeeded 12 performed at 2016-12-11T19:10:19.886Z 
+11:10:20.233 INFO  getcartvolume 12 performed at 2016-12-11T19:10:20.233Z 
+11:10:20.241 INFO  getad 12 performed at 2016-12-11T19:10:20.241Z 
+11:10:23.394 INFO  view cart clicked 12 performed at 2016-12-11T19:10:23.394Z 
+11:10:23.753 INFO  Cart viewed 12 performed at 2016-12-11T19:10:23.753Z 
+11:10:27.205 INFO  item removed from cart 12 performed at 2016-12-11T19:10:27.205Z item no 34 
+11:10:32.515 INFO  item removed from cart 12 performed at 2016-12-11T19:10:32.515Z item no 46 
+11:10:35.486 INFO  getcartvolume 12 performed at 2016-12-11T19:10:35.486Z 
+11:10:35.495 INFO  getad 12 performed at 2016-12-11T19:10:35.495Z 
+11:10:38.636 INFO  item added to cart 12 performed at 2016-12-11T19:10:38.636Z item no 34 
+11:10:39.067 INFO  Cart viewed 12 performed at 2016-12-11T19:10:39.067Z 
+11:10:55.590 INFO  item removed from cart 12 performed at 2016-12-11T19:10:55.590Z item no 34 
+11:10:58.258 INFO  getcartvolume 12 performed at 2016-12-11T19:10:58.258Z 
+11:10:58.265 INFO  getad 12 performed at 2016-12-11T19:10:58.265Z 
+11:11:00.619 INFO  item added to cart 12 performed at 2016-12-11T19:11:00.619Z item no 34 
+11:11:01.009 INFO  Cart viewed 12 performed at 2016-12-11T19:11:01.009Z 
+11:11:07.066 INFO  getcartvolume 12 performed at 2016-12-11T19:11:07.066Z 
+11:11:07.071 INFO  getad 12 performed at 2016-12-11T19:11:07.071Z 
+11:29:43.100 INFO  getcartvolume 12 performed at 2016-12-11T19:29:43.099Z 
+11:29:43.127 INFO  getad 12 performed at 2016-12-11T19:29:43.127Z 
+11:29:47.162 INFO  view cart clicked 12 performed at 2016-12-11T19:29:47.162Z 
+11:29:47.554 INFO  Cart viewed 12 performed at 2016-12-11T19:29:47.554Z 
+11:29:51.684 INFO  item removed from cart 12 performed at 2016-12-11T19:29:51.684Z item no 55 
+11:30:32.657 INFO  payment transaction 12 performed at 2016-12-11T19:30:32.657Z 
+11:30:33.232 INFO  getcartvolume 12 performed at 2016-12-11T19:30:33.232Z 
+11:30:33.237 INFO  getad 12 performed at 2016-12-11T19:30:33.236Z 
+11:32:09.872 INFO  item added to cart 12 performed at 2016-12-11T19:32:09.872Z item no 46 
+11:32:10.470 INFO  Cart viewed 12 performed at 2016-12-11T19:32:10.470Z 
+11:32:46.815 INFO  payment transaction 12 performed at 2016-12-11T19:32:46.815Z 
+11:32:47.368 INFO  getcartvolume 12 performed at 2016-12-11T19:32:47.368Z 
+11:32:47.372 INFO  getad 12 performed at 2016-12-11T19:32:47.372Z 
+11:34:25.473 INFO  item added to cart 12 performed at 2016-12-11T19:34:25.472Z item no 46 
+11:34:27.185 INFO  Cart viewed 12 performed at 2016-12-11T19:34:27.185Z 
+11:34:51.866 INFO  payment transaction 12 performed at 2016-12-11T19:34:51.865Z 
+11:34:52.422 INFO  getcartvolume 12 performed at 2016-12-11T19:34:52.422Z 
+11:34:52.429 INFO  getad 12 performed at 2016-12-11T19:34:52.429Z 
+11:35:53.019 INFO  item added to cart 12 performed at 2016-12-11T19:35:53.019Z item no 46 
+11:35:53.684 INFO  Cart viewed 12 performed at 2016-12-11T19:35:53.684Z 
+11:36:12.630 INFO  payment transaction 12 performed at 2016-12-11T19:36:12.630Z 
+11:36:13.190 INFO  getcartvolume 12 performed at 2016-12-11T19:36:13.190Z 
+11:36:13.230 INFO  getad 12 performed at 2016-12-11T19:36:13.230Z 
+11:36:14.140 INFO  payment successful 12 performed at 2016-12-11T19:36:14.140Z 
+11:36:21.329 INFO  view cart clicked 12 performed at 2016-12-11T19:36:21.329Z 
+11:36:21.669 INFO  Cart viewed 12 performed at 2016-12-11T19:36:21.668Z 
+11:36:24.836 INFO  getcartvolume 12 performed at 2016-12-11T19:36:24.836Z 
+11:36:24.842 INFO  getad 12 performed at 2016-12-11T19:36:24.842Z 
+11:36:40.345 INFO  item added to cart 12 performed at 2016-12-11T19:36:40.345Z item no 46 
+11:36:40.822 INFO  Cart viewed 12 performed at 2016-12-11T19:36:40.822Z 
+11:37:28.276 INFO  payment transaction 12 performed at 2016-12-11T19:37:28.276Z 
+11:37:28.550 INFO  payment successful 12 performed at 2016-12-11T19:37:28.550Z 
+11:37:28.811 INFO  getcartvolume 12 performed at 2016-12-11T19:37:28.811Z 
+11:37:28.817 INFO  getad 12 performed at 2016-12-11T19:37:28.817Z 
+11:38:09.737 INFO  item added to cart 12 performed at 2016-12-11T19:38:09.736Z item no 46 
+11:38:10.375 INFO  Cart viewed 12 performed at 2016-12-11T19:38:10.375Z 
+11:38:12.015 INFO  logout  performed at 2016-12-11T19:38:12.015Z 
+11:38:16.798 INFO  sign in attempt initiated guru@gmail.com performed at 2016-12-11T19:38:16.798Z 
+11:38:17.982 INFO  sign in attempt succeeded 19 performed at 2016-12-11T19:38:17.982Z 
+11:38:18.232 INFO  getcartvolume 19 performed at 2016-12-11T19:38:18.232Z 
+11:38:18.280 INFO  getad 19 performed at 2016-12-11T19:38:18.280Z 
+11:38:20.913 INFO  item added to cart 19 performed at 2016-12-11T19:38:20.913Z item no 46 
+11:38:21.375 INFO  Cart viewed 19 performed at 2016-12-11T19:38:21.375Z 
+11:38:41.314 INFO  payment transaction 19 performed at 2016-12-11T19:38:41.314Z 
+11:38:41.796 INFO  getcartvolume 19 performed at 2016-12-11T19:38:41.796Z 
+11:38:41.805 INFO  getad 19 performed at 2016-12-11T19:38:41.805Z 
+11:38:52.530 INFO  getcartvolume 19 performed at 2016-12-11T19:38:52.530Z 
+11:38:52.534 INFO  getad 19 performed at 2016-12-11T19:38:52.533Z 
+11:38:56.847 INFO  item added to cart 19 performed at 2016-12-11T19:38:56.847Z item no 46 
+11:39:03.113 INFO  view cart clicked 19 performed at 2016-12-11T19:39:03.113Z 
+11:39:03.384 INFO  Cart viewed 19 performed at 2016-12-11T19:39:03.384Z 
+11:39:06.750 INFO  getcartvolume 19 performed at 2016-12-11T19:39:06.750Z 
+11:39:06.757 INFO  getad 19 performed at 2016-12-11T19:39:06.757Z 
+11:39:21.841 INFO  logout  performed at 2016-12-11T19:39:21.841Z 
+11:39:23.942 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T19:39:23.942Z 
+11:39:25.033 INFO  sign in attempt succeeded 12 performed at 2016-12-11T19:39:25.033Z 
+11:39:25.299 INFO  getcartvolume 12 performed at 2016-12-11T19:39:25.299Z 
+11:39:25.303 INFO  getad 12 performed at 2016-12-11T19:39:25.302Z 
+11:39:27.052 INFO  view cart clicked 12 performed at 2016-12-11T19:39:27.052Z 
+11:39:27.319 INFO  Cart viewed 12 performed at 2016-12-11T19:39:27.318Z 
+11:39:30.305 INFO  getcartvolume 12 performed at 2016-12-11T19:39:30.305Z 
+11:39:30.308 INFO  getad 12 performed at 2016-12-11T19:39:30.308Z 
+11:39:32.490 INFO  logout  performed at 2016-12-11T19:39:32.490Z 
+11:39:38.386 INFO  sign in attempt initiated guru@gmail.com performed at 2016-12-11T19:39:38.386Z 
+11:39:39.481 INFO  sign in attempt succeeded 19 performed at 2016-12-11T19:39:39.481Z 
+11:39:39.785 INFO  getcartvolume 19 performed at 2016-12-11T19:39:39.785Z 
+11:39:39.791 INFO  getad 19 performed at 2016-12-11T19:39:39.791Z 
+11:48:02.498 INFO  item added to cart 19 performed at 2016-12-11T19:48:02.498Z item no 51 
+11:48:04.151 INFO  Cart viewed 19 performed at 2016-12-11T19:48:04.151Z 
+11:48:07.698 INFO  item removed from cart 19 performed at 2016-12-11T19:48:07.698Z item no 51 
+11:48:11.310 INFO  getcartvolume 19 performed at 2016-12-11T19:48:11.310Z 
+11:48:11.314 INFO  getad 19 performed at 2016-12-11T19:48:11.314Z 
+11:48:13.476 INFO  item added to cart 19 performed at 2016-12-11T19:48:13.476Z item no 51 
+11:48:13.909 INFO  Cart viewed 19 performed at 2016-12-11T19:48:13.909Z 
+11:48:17.266 INFO  getcartvolume 19 performed at 2016-12-11T19:48:17.266Z 
+11:48:17.271 INFO  getad 19 performed at 2016-12-11T19:48:17.271Z 
+11:48:19.554 INFO  view cart clicked 19 performed at 2016-12-11T19:48:19.554Z 
+11:48:19.826 INFO  Cart viewed 19 performed at 2016-12-11T19:48:19.826Z 
+11:48:21.506 INFO  item removed from cart 19 performed at 2016-12-11T19:48:21.506Z item no 51 
+11:49:04.703 INFO  getcartvolume 19 performed at 2016-12-11T19:49:04.703Z 
+11:49:04.706 INFO  getad 19 performed at 2016-12-11T19:49:04.706Z 
+11:50:21.290 INFO  item added to cart 19 performed at 2016-12-11T19:50:21.290Z item no 46 
+11:50:21.876 INFO  Cart viewed 19 performed at 2016-12-11T19:50:21.876Z 
+11:50:36.759 INFO  payment transaction 19 performed at 2016-12-11T19:50:36.759Z 
+11:50:37.274 INFO  getcartvolume 19 performed at 2016-12-11T19:50:37.274Z 
+11:50:37.280 INFO  getad 19 performed at 2016-12-11T19:50:37.280Z 
+11:52:18.797 INFO  getcartvolume 19 performed at 2016-12-11T19:52:18.797Z 
+11:52:18.805 INFO  getad 19 performed at 2016-12-11T19:52:18.805Z 
+11:52:27.236 INFO  item added to cart 19 performed at 2016-12-11T19:52:27.236Z item no 46 
+11:52:27.654 INFO  Cart viewed 19 performed at 2016-12-11T19:52:27.654Z 
+11:52:44.961 INFO  payment transaction 19 performed at 2016-12-11T19:52:44.961Z 
+11:52:45.424 INFO  payment successful 19 performed at 2016-12-11T19:52:45.424Z 
+11:52:45.482 INFO  getcartvolume 19 performed at 2016-12-11T19:52:45.482Z 
+11:52:45.494 INFO  getad 19 performed at 2016-12-11T19:52:45.494Z 
+11:53:07.192 INFO  getcartvolume 19 performed at 2016-12-11T19:53:07.192Z 
+11:53:07.197 INFO  getad 19 performed at 2016-12-11T19:53:07.197Z 
+11:53:09.690 INFO  getcartvolume 19 performed at 2016-12-11T19:53:09.690Z 
+11:53:09.696 INFO  getad 19 performed at 2016-12-11T19:53:09.695Z 
+11:53:13.413 INFO  logout  performed at 2016-12-11T19:53:13.413Z 
+11:53:15.213 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T19:53:15.213Z 
+11:53:16.374 INFO  sign in attempt succeeded 12 performed at 2016-12-11T19:53:16.374Z 
+11:53:16.647 INFO  getcartvolume 12 performed at 2016-12-11T19:53:16.647Z 
+11:53:16.659 INFO  getad 12 performed at 2016-12-11T19:53:16.659Z 
+11:53:19.853 INFO  view cart clicked 12 performed at 2016-12-11T19:53:19.853Z 
+11:53:20.120 INFO  Cart viewed 12 performed at 2016-12-11T19:53:20.120Z 
+11:53:44.307 INFO  getcartvolume 12 performed at 2016-12-11T19:53:44.307Z 
+11:53:44.315 INFO  getad 12 performed at 2016-12-11T19:53:44.315Z 
+11:54:14.896 INFO  post ad clicked 12 performed at 2016-12-11T19:54:14.896Z 
+11:54:15.421 INFO  getcartvolume 12 performed at 2016-12-11T19:54:15.421Z 
+11:54:35.170 INFO  postad 12 performed at 2016-12-11T19:54:35.170Z item is Test Medicine 
+11:54:35.692 INFO  getcartvolume 12 performed at 2016-12-11T19:54:35.692Z 
+11:54:35.696 INFO  getad 12 performed at 2016-12-11T19:54:35.696Z 
+11:54:42.636 INFO  item added to cart 12 performed at 2016-12-11T19:54:42.636Z item no 55 
+11:54:43.075 INFO  Cart viewed 12 performed at 2016-12-11T19:54:43.075Z 
+11:54:45.703 INFO  logout  performed at 2016-12-11T19:54:45.703Z 
+11:54:51.073 INFO  sign in attempt initiated guru@gmail.com performed at 2016-12-11T19:54:51.073Z 
+11:54:52.148 INFO  sign in attempt succeeded 19 performed at 2016-12-11T19:54:52.148Z 
+11:54:52.395 INFO  getcartvolume 19 performed at 2016-12-11T19:54:52.395Z 
+11:54:52.399 INFO  getad 19 performed at 2016-12-11T19:54:52.399Z 
+11:54:56.321 INFO  logout  performed at 2016-12-11T19:54:56.321Z 
+11:55:07.785 INFO  sign in attempt initiated harini@gmail.com performed at 2016-12-11T19:55:07.785Z 
+11:55:08.860 INFO  sign in attempt succeeded 11 performed at 2016-12-11T19:55:08.860Z 
+11:55:09.312 INFO  getcartvolume 11 performed at 2016-12-11T19:55:09.312Z 
+11:55:09.321 INFO  getad 11 performed at 2016-12-11T19:55:09.321Z 
+11:55:17.627 INFO  item added to cart 11 performed at 2016-12-11T19:55:17.627Z item no 55 
+11:55:18.121 INFO  Cart viewed 11 performed at 2016-12-11T19:55:18.121Z 
+11:55:36.932 INFO  payment transaction 11 performed at 2016-12-11T19:55:36.932Z 
+11:55:37.344 INFO  payment successful 11 performed at 2016-12-11T19:55:37.344Z 
+11:55:37.556 INFO  getcartvolume 11 performed at 2016-12-11T19:55:37.556Z 
+11:55:37.559 INFO  getad 11 performed at 2016-12-11T19:55:37.558Z 
+11:55:42.246 INFO  logout  performed at 2016-12-11T19:55:42.245Z 
+11:55:46.936 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-11T19:55:46.936Z 
+11:55:48.092 INFO  sign in attempt succeeded 12 performed at 2016-12-11T19:55:48.092Z 
+11:55:48.375 INFO  getcartvolume 12 performed at 2016-12-11T19:55:48.375Z 
+11:55:48.381 INFO  getad 12 performed at 2016-12-11T19:55:48.380Z 
+11:55:50.312 INFO  view cart clicked 12 performed at 2016-12-11T19:55:50.312Z 
+11:55:50.566 INFO  Cart viewed 12 performed at 2016-12-11T19:55:50.566Z 
+11:55:52.444 INFO  getcartvolume 12 performed at 2016-12-11T19:55:52.444Z 
+11:55:52.447 INFO  getad 12 performed at 2016-12-11T19:55:52.447Z 
+12:08:10.121 INFO  user profile clicked 12 performed at 2016-12-11T20:08:10.120Z 
+12:08:11.165 INFO  getcartvolume 12 performed at 2016-12-11T20:08:11.165Z 
+12:08:11.204 INFO  get user info 12 performed at 2016-12-11T20:08:11.204Z 
+12:08:16.622 INFO  user profile clicked 12 performed at 2016-12-11T20:08:16.622Z 
+12:08:17.164 INFO  get user info 12 performed at 2016-12-11T20:08:17.164Z 
+12:08:17.173 INFO  getcartvolume 12 performed at 2016-12-11T20:08:17.173Z 
+12:08:19.337 INFO  user profile clicked 12 performed at 2016-12-11T20:08:19.336Z 
+12:08:19.878 INFO  get user info 12 performed at 2016-12-11T20:08:19.878Z 
+12:08:19.885 INFO  getcartvolume 12 performed at 2016-12-11T20:08:19.884Z 
+12:08:33.172 INFO  user profile clicked 12 performed at 2016-12-11T20:08:33.172Z 
+12:08:33.740 INFO  get user info 12 performed at 2016-12-11T20:08:33.740Z 
+12:08:33.745 INFO  getcartvolume 12 performed at 2016-12-11T20:08:33.745Z 
+17:22:32.666 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-12T01:22:32.666Z 
+17:22:34.095 INFO  sign in attempt succeeded 12 performed at 2016-12-12T01:22:34.095Z 
+17:22:35.088 INFO  getad 12 performed at 2016-12-12T01:22:35.088Z 
+17:22:35.102 INFO  getcartvolume 12 performed at 2016-12-12T01:22:35.102Z 
+17:22:47.396 INFO  user history clicked 12 performed at 2016-12-12T01:22:47.396Z 
+17:22:47.735 INFO  getcartvolume 12 performed at 2016-12-12T01:22:47.735Z 
+17:22:47.743 INFO  User history view 12 performed at 2016-12-12T01:22:47.743Z 
+17:23:09.695 INFO  logout  performed at 2016-12-12T01:23:09.695Z 
+17:23:17.361 INFO  sign in attempt initiated guru@gmail.com performed at 2016-12-12T01:23:17.361Z 
+17:23:18.333 INFO  sign in attempt succeeded 19 performed at 2016-12-12T01:23:18.333Z 
+17:23:18.627 INFO  getcartvolume 19 performed at 2016-12-12T01:23:18.627Z 
+17:23:18.632 INFO  getad 19 performed at 2016-12-12T01:23:18.632Z 
+17:23:25.588 INFO  user history clicked 19 performed at 2016-12-12T01:23:25.588Z 
+17:23:25.840 INFO  getcartvolume 19 performed at 2016-12-12T01:23:25.840Z 
+17:23:25.845 INFO  User history view 19 performed at 2016-12-12T01:23:25.845Z 
+17:25:57.160 INFO  post ad clicked 19 performed at 2016-12-12T01:25:57.160Z 
+17:25:57.910 INFO  getcartvolume 19 performed at 2016-12-12T01:25:57.910Z 
+17:26:10.536 INFO  postad 19 performed at 2016-12-12T01:26:10.536Z item is Ninja  
+17:26:10.837 INFO  getcartvolume 19 performed at 2016-12-12T01:26:10.837Z 
+17:26:10.842 INFO  getad 19 performed at 2016-12-12T01:26:10.842Z 
+17:26:12.908 INFO  logout  performed at 2016-12-12T01:26:12.908Z 
+17:26:14.651 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-12T01:26:14.651Z 
+17:26:15.576 INFO  sign in attempt succeeded 12 performed at 2016-12-12T01:26:15.576Z 
+17:26:15.797 INFO  getcartvolume 12 performed at 2016-12-12T01:26:15.797Z 
+17:26:15.803 INFO  getad 12 performed at 2016-12-12T01:26:15.803Z 
+17:26:22.782 INFO  addbid 12 performed at 2016-12-12T01:26:22.782Z 
+17:26:23.122 INFO  getcartvolume 12 performed at 2016-12-12T01:26:23.122Z 
+17:26:23.131 INFO  getad 12 performed at 2016-12-12T01:26:23.131Z 
+17:26:27.255 INFO  view cart clicked 12 performed at 2016-12-12T01:26:27.255Z 
+17:26:27.661 INFO  Cart viewed 12 performed at 2016-12-12T01:26:27.661Z 
+17:26:32.499 INFO  logout  performed at 2016-12-12T01:26:32.499Z 
+17:28:25.901 INFO  sign up attempt initiated performed at 2016-12-12T01:28:25.901Z 
+17:28:27.131 INFO  sign up attempt smitha@gmail.com performed at 2016-12-12T01:28:27.131Z 
+17:29:53.386 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-12T01:29:53.386Z 
+17:29:54.493 INFO  sign in attempt succeeded 12 performed at 2016-12-12T01:29:54.493Z 
+17:29:54.889 INFO  getcartvolume 12 performed at 2016-12-12T01:29:54.889Z 
+17:29:54.893 INFO  getad 12 performed at 2016-12-12T01:29:54.893Z 
+17:29:57.319 INFO  view cart clicked 12 performed at 2016-12-12T01:29:57.319Z 
+17:29:57.592 INFO  Cart viewed 12 performed at 2016-12-12T01:29:57.592Z 
+17:30:02.582 INFO  logout  performed at 2016-12-12T01:30:02.582Z 
+18:01:31.901 INFO  sign in attempt initiated smitha@gmail.com performed at 2016-12-12T02:01:31.901Z 
+18:01:33.042 INFO  sign in attempt succeeded 12 performed at 2016-12-12T02:01:33.042Z 
+18:01:33.690 INFO  getcartvolume 12 performed at 2016-12-12T02:01:33.690Z 
+18:01:33.695 INFO  getad 12 performed at 2016-12-12T02:01:33.695Z 
+18:01:36.858 INFO  user history clicked 12 performed at 2016-12-12T02:01:36.858Z 
+18:01:37.155 INFO  getcartvolume 12 performed at 2016-12-12T02:01:37.154Z 
+18:01:37.160 INFO  User history view 12 performed at 2016-12-12T02:01:37.160Z 
+18:04:16.390 INFO  post ad clicked 12 performed at 2016-12-12T02:04:16.390Z 
+18:04:17.081 INFO  getcartvolume 12 performed at 2016-12-12T02:04:17.081Z 
+18:04:31.347 INFO  postad 12 performed at 2016-12-12T02:04:31.347Z item is Test Naruto Stickers 
+18:04:31.717 INFO  getcartvolume 12 performed at 2016-12-12T02:04:31.717Z 
+18:04:31.723 INFO  getad 12 performed at 2016-12-12T02:04:31.723Z 
+18:04:35.194 INFO  logout  performed at 2016-12-12T02:04:35.194Z 
+18:04:40.348 INFO  sign in attempt initiated guru@gmail.com performed at 2016-12-12T02:04:40.348Z 
+18:04:41.461 INFO  sign in attempt succeeded 19 performed at 2016-12-12T02:04:41.461Z 
+18:04:41.705 INFO  getcartvolume 19 performed at 2016-12-12T02:04:41.705Z 
+18:04:41.710 INFO  getad 19 performed at 2016-12-12T02:04:41.710Z 
+18:04:49.746 INFO  addbid 19 performed at 2016-12-12T02:04:49.746Z 
+18:04:50.122 INFO  getcartvolume 19 performed at 2016-12-12T02:04:50.122Z 
+18:04:50.130 INFO  getad 19 performed at 2016-12-12T02:04:50.130Z 
